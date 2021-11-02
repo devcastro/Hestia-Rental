@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 import { menuData } from '../data/MenuData';
 import { Button } from './Button';
+import { BiHotel } from 'react-icons/bi';
 
 
 const Nav = styled.nav`
@@ -23,18 +24,35 @@ const NavLink = css`
     height: 100%;
     cursor: pointer;
     text-decoration: none;
+    font-style: normal;
 `
 
 const Logo = styled(Link)`
     ${NavLink}
     font-style: italic;
 `
-const MenuBars = styled.i``;
+const MenuBars = styled(BiHotel)`
+    display: none;
+
+    @media only screen and (max-width: 768px){
+        display: block;
+        font-size: 35px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-22px, 12px);
+    }
+`;
 
 const NavMenu = styled.i`
     display: flex;
     align-items: center;
     margin-right:-48px;
+
+    @media screen and (max-width: 760px){
+        display:none;
+    }
 
 `;
 
@@ -46,6 +64,10 @@ const NavBtn = styled.div`
     display: flex;
     align-items: center;
     margin-right: 24px;
+
+    @media screen and (max-width: 760px){
+        display:none;
+    }
 `;
 
 const Navbar = () => {
