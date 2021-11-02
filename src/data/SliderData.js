@@ -15,7 +15,7 @@ export const SliderData = [
     },
     {
         title: 'Cozy Studio in Plateau Mont-Royal',
-        price: '$2600',
+        price: '$2500',
         path: '/homes',
         label: 'View Home',
         image: image2,
@@ -23,7 +23,7 @@ export const SliderData = [
     },
     {
         title: 'Two bedroom in Little Burgundy ',
-        price: '$2600',
+        price: '$2000',
         path: '/homes',
         label: 'View Home',
         image: image3,
@@ -31,7 +31,7 @@ export const SliderData = [
     },
     {
         title: 'Best Chalet in Chertsey',
-        price: '$2600',
+        price: '$8000',
         path: '/homes',
         label: 'View Home',
         image: image4,
