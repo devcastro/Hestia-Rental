@@ -86,7 +86,7 @@ const Footer = () => {
                 <FaYoutube />
               </SocialIconLink>
               <SocialIconLink
-                href='https://twitter.com/StaysHestia'
+                href='https://twitter.com/HestiaHomes'
                 target='_blank'
                 aria-label='Twitter'
                 rel='noopener noreferrer'
