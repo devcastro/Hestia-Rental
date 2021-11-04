@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import { Button } from "./Button";
 
@@ -18,7 +20,7 @@ const Container = styled.div`
     grid-template-columns: 1fr;
   }
 `;
-const ColumnLeft = styled.div`
+const ColumnLeft = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,6 +28,8 @@ const ColumnLeft = styled.div`
   line-height: 1.4;
   padding: 1rem 2rem;
   order: ${({ reverse }) => (reverse ? "2" : "1")};
+  transform: translateY(50px);
+  transition: all 0.5s ease-out;
 
   h1 {
     margin-bottom: 1rem;
@@ -34,8 +38,13 @@ const ColumnLeft = styled.div`
   p {
     margin-bottom: 2rem;
   }
+
+  text-appear {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 `;
-const ColumnRight = styled.div`
+const ColumnRight = styled(motion.div)`
   padding: 1rem 2rem;
   order: ${({ reverse }) => (reverse ? "1" : "2")};
   display: flex;
@@ -58,18 +67,43 @@ const ColumnRight = styled.div`
   }
 `;
 
+const textvariants = {
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  hidden: { opacity: 0, x: -300 },
+}; // text animation variant
+
+const imagevariants = {
+  visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  hidden: { opacity: 0, x: 300 },
+}; // text animation variant
+
 const InfoSection = ({
   heading,
   paragraph1,
   paragraph2,
   buttonLabel,
   reverse,
-  image,
+  image, //properties called from InfoData
 }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
     <Section>
       <Container>
-        <ColumnLeft>
+        <ColumnLeft
+          reverse={reverse}
+          ref={ref}
+          animate={controls}
+          initial="hidden"
+          variants={textvariants}
+        >
           <h1>{heading}</h1>
           <p>{paragraph1}</p>
           <p>{paragraph2}</p>
@@ -77,8 +111,15 @@ const InfoSection = ({
             {buttonLabel}
           </Button>
         </ColumnLeft>
-        <ColumnRight reverse={reverse}>
-          <img src={image} alt="home" />
+
+        <ColumnRight
+          reverse={reverse}
+          ref={ref}
+          animate={controls}
+          initial="hidden"
+          variants={imagevariants}
+        >
+          <img src={image} alt="vacation rental home" />
         </ColumnRight>
       </Container>
     </Section>

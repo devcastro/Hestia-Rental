@@ -2,7 +2,6 @@ import React from 'react';
 import {
   FaFacebook,
   FaInstagram,
-  FaYoutube,
   FaTwitter,
   FaLinkedin
 } from 'react-icons/fa';
@@ -82,9 +81,7 @@ const Footer = () => {
               <SocialIconLink href='https://www.instagram.com/choicebookings/' target='_blank' rel="noreferrer" aria-label='Instagram'>
                 <FaInstagram />
               </SocialIconLink>
-              <SocialIconLink href='/#' target='_blank' rel="noreferrer" aria-label='Youtube'>
-                <FaYoutube />
-              </SocialIconLink>
+
               <SocialIconLink
                 href='https://twitter.com/HestiaHomes'
                 target='_blank'
