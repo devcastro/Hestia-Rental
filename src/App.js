@@ -5,7 +5,7 @@ import InfoSection from "./components/InfoSection";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import { InfoData, InfoData2 } from "./data/InfoData";
 import { SliderData } from "./data/SliderData";
-import About from "./pages/about.js";
+import About from "./pages/About.js";
 import GlobalStyle from "./globalStyles";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
