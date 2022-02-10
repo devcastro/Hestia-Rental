@@ -1,6 +1,5 @@
 import React from 'react';
-import RentalNavbar from '../components/RentalNavbar.jsx';
-import Dropdown from '../components/Dropdown.js';
+
 import RentalSection from "../components/RentalSection";
 import { RoomsData, RoomsData2, RoomsData3 } from "../data/RentalData";
 
