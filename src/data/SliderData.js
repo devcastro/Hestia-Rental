@@ -5,12 +5,12 @@ import image4 from "../images/image4.jpg";
 
 export const SliderData = [
   {
-    title: "Small Loft in Old Montreal",
-    price: "$2600",
+    title: "NDG Student Housing",
+    price: "Starting at 600$",
     path: "/rentals",
-    label: "View Home",
+    label: "View rooms",
     image: image1,
-    alt: "Rental Home",
+    alt: "Montreal Student Housing",
   },
   {
     title: "Cozy Studio in Plateau Mont-Royal",
@@ -29,7 +29,7 @@ export const SliderData = [
     alt: "Rental Home",
   },
   {
-    title: "Best Chalet in Chertsey",
+    title: "Heavenly Cabin in Chertsey",
     price: "$8000",
     path: "/rentals",
     label: "View Home",

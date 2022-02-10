@@ -46,7 +46,7 @@ const MenuBars = styled(BiHotel)`
 `;
 
 const NavMenu = styled.i`
-    display: flex;
+    display: none;
     align-items: center;
     margin-right:-48px;
 
@@ -70,10 +70,10 @@ const NavBtn = styled.div`
     }
 `;
 
-const Navbar = ({toggle}) => {
+const RentalNavbar = ({toggle}) => {
     return (
         <Nav>
-            <Logo to="/">Better Haus</Logo>
+            <Logo to="/"></Logo>
             <MenuBars onClick={toggle}/>
             <NavMenu>
                 {menuData.map((item, index) => (
@@ -83,10 +83,10 @@ const Navbar = ({toggle}) => {
                 ))}
             </NavMenu>
             <NavBtn>
-                <Button to="/contact" primary='true'>Contact Us</Button>
+                <Button to="/" primary='true'>Back</Button>
             </NavBtn>
         </Nav>
     )
 }
 
-export default Navbar
+export default RentalNavbar

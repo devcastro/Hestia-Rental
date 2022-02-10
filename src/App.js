@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
+import RentalNavbar from "./components/RentalNavbar";
 import Dropdown from "./components/Dropdown";
 import InfoSection from "./components/InfoSection";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import { InfoData, InfoData2 } from "./data/InfoData";
 import { SliderData } from "./data/SliderData";
 import About from "./pages/About.js";
+import Rentals from "./pages/Rentals.js"
 import GlobalStyle from "./globalStyles";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
@@ -44,10 +46,10 @@ function App() {
       <Switch>
         {" "}
         {/* RENTALS PAGE */}
-        <Route path="/rentals">
-          <Navbar toggle={toggle} />
+        <Route path="/rentals" target="_blank" rel="noopener noreferrer">
+        <RentalNavbar toggle={toggle} />
           <Dropdown isOpen={isOpen} toggle={toggle} />
-          <About /> {/* TEMPORARY PLACEHOLDER */}
+          <Rentals /> {/* CURRENTLY IN PROGRESS */}
         </Route>
       </Switch>
 

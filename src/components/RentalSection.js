@@ -33,7 +33,7 @@ const ColumnLeft = styled(motion.div)`
 
   h1 {
     margin-bottom: 1rem;
-    font-size: clamp(1.5rem, 6vw, 2rem);
+    font-size: 80px;
   }
   p {
     margin-bottom: 2rem;
@@ -77,13 +77,13 @@ const imagevariants = {
   hidden: { opacity: 0, x: 300 },
 }; // text animation variant
 
-const InfoSection = ({
+const RentalSection = ({
   heading,
   paragraph1,
   paragraph2,
   buttonLabel,
   reverse,
-  image, //properties called from InfoData
+  image //properties called from RentalData
 }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -107,9 +107,10 @@ const InfoSection = ({
           <h1>{heading}</h1>
           <p>{paragraph1}</p>
           <p>{paragraph2}</p>
-          <Button to="/rentals" primary="true">
+          <Button to="/homes" primary="true">
             {buttonLabel}
           </Button>
+          
         </ColumnLeft>
 
         <ColumnRight
@@ -119,11 +120,12 @@ const InfoSection = ({
           initial="hidden"
           variants={imagevariants}
         >
-          <img src={image} alt="vacation rental home" />
+          <img src={image} alt="keyless door lock" />
         </ColumnRight>
       </Container>
+
     </Section>
   );
 };
 
-export default InfoSection;
+export default RentalSection;
