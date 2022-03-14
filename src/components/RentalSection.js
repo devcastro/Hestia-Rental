@@ -83,7 +83,7 @@ const RentalSection = ({
   paragraph2,
   buttonLabel,
   reverse,
-  image //properties called from RentalData
+  image, //properties called from RentalData
 }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -107,10 +107,9 @@ const RentalSection = ({
           <h1>{heading}</h1>
           <p>{paragraph1}</p>
           <p>{paragraph2}</p>
-          <Button to="/homes" primary="true">
+          <Button to="/contact" primary="true">
             {buttonLabel}
           </Button>
-          
         </ColumnLeft>
 
         <ColumnRight
@@ -123,7 +122,6 @@ const RentalSection = ({
           <img src={image} alt="keyless door lock" />
         </ColumnRight>
       </Container>
-
     </Section>
   );
 };
