@@ -21,7 +21,7 @@ export const RoomsData2 = {
       "Designed by our interior specialist using hand picked furniture, with care and class in mind. ",
     paragraph2:
       "Each space includes a desk, a bed with all the necessary bedding, down filled pillows, unlimited high speed internet, heating, windows and a secure padlock. We are open to any special requests, don't hesitate to ask us anything you may require.",
-    buttonLabel: "Contact a reservation agent",
+    buttonLabel: "Available",
     image: Image9,
     reverse: true,
     delay: 500,

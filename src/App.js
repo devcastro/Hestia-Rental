@@ -40,6 +40,7 @@ function App() {
           <Navbar toggle={toggle} />
           <Dropdown isOpen={isOpen} toggle={toggle} />
           <About />
+          <Footer />
         </Route>
       </Switch>
 
@@ -50,6 +51,7 @@ function App() {
         <RentalNavbar toggle={toggle} />
           <Dropdown isOpen={isOpen} toggle={toggle} />
           <Rentals /> {/* CURRENTLY IN PROGRESS */}
+          <Footer />
         </Route>
       </Switch>
 

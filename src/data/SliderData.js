@@ -8,7 +8,7 @@ export const SliderData = [
     title: "NDG Student Housing",
     price: "Starting at 600$",
     path: "/rentals",
-    label: "View rooms",
+    label: "View Rooms",
     image: image1,
     alt: "Montreal Student Housing",
   },

@@ -73,7 +73,7 @@ const Footer = () => {
       <FooterWrap>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to='/#'>Hestia Stays by ChoiceBookings</SocialLogo>
+            <SocialLogo to='/#'> Property Management Project</SocialLogo>
             <SocialIcons>
               <SocialIconLink href='/#' target='_blank' rel="noreferrer" aria-label='Facebook'>
                 <FaFacebook />
